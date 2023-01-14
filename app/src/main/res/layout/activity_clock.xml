@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".ClockActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clock_constraintLayout_main_clock"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/circle_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.13999999">
+
+        <TextView
+            android:id="@+id/clock_main_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_clock_string"
+            android:textColor="#ffffff"
+            android:textSize="45pt"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/clock_next_timer_clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/circle_rectangle_background"
+        android:gravity="center"
+        android:text="@string/default_clock_string"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="14pt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clock_constraintLayout_main_clock" />
+
+    <TextView
+        android:id="@+id/clock_previous_timer_count"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/circle_background"
+        android:gravity="center"
+        android:text="@string/default_counter"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="10pt"
+        app:layout_constraintBottom_toBottomOf="@+id/clock_next_timer_clock"
+        app:layout_constraintEnd_toStartOf="@+id/clock_next_timer_clock"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/clock_next_timer_clock" />
+
+    <TextView
+        android:id="@+id/clock_remaining_timer_count"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/circle_background"
+        android:gravity="center"
+        android:text="@string/default_counter"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="10pt"
+        app:layout_constraintBottom_toBottomOf="@+id/clock_next_timer_clock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/clock_next_timer_clock"
+        app:layout_constraintTop_toTopOf="@+id/clock_next_timer_clock" />
+
+    <ImageButton
+        android:id="@+id/clock_control_button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/circle_background"
+        android:backgroundTint="#EE2323"
+        android:contentDescription="control switch"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clock_next_timer_clock"
+        app:srcCompat="@android:drawable/ic_media_play" />
+</androidx.constraintlayout.widget.ConstraintLayout>

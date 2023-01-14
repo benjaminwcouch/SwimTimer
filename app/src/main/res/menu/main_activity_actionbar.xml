@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/clear_main"
+        android:title="Clear"
+        android:icon="@android:drawable/ic_menu_close_clear_cancel"
+        app:showAsAction="always"
+        android:visible="false"
+        />
+
+    <item
+        android:id="@+id/addition_main"
+        android:title="@string/main_actionbar_addition"
+        android:icon="@android:drawable/ic_menu_add"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/delete_main"
+        android:title="@string/main_activity_deletion"
+        android:icon="@android:drawable/ic_menu_delete"
+        app:showAsAction="ifRoom"
+        android:enabled="true"
+        android:visible="false"/>
+
+</menu>

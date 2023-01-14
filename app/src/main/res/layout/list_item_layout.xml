@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/list_item_background"
+    android:id="@+id/container_list_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    >
+
+    <TextView
+        android:id="@+id/label_list_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="4dp"
+        android:text="@string/dummy_label_list_item"
+        android:textColor="@color/textPrimary"
+        android:textSize="14pt"
+        app:layout_constraintBottom_toTopOf="@+id/counter_rounds_list_item"
+        app:layout_constraintEnd_toStartOf="@+id/start_list_item"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/start_list_item"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/circle_button"
+        android:contentDescription="@string/cd_startButton_list_item"
+        android:textColor="#FFFFFF"
+        android:tint="@color/buttons"
+        app:layout_constraintBottom_toBottomOf="@+id/label_list_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/label_list_item"
+        app:layout_constraintTop_toTopOf="@+id/label_list_item"
+        app:srcCompat="@android:drawable/ic_media_play" />
+
+    <TextView
+        android:id="@+id/counter_rounds_list_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="5dp"
+        android:text="@string/default_count_empty"
+        android:textColor="@color/textSecondary"
+        app:layout_constraintEnd_toStartOf="@+id/label_rounds_list_item"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/label_rounds_list_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/rounds_list_item"
+        android:textColor="@color/textSecondary"
+        app:layout_constraintBottom_toBottomOf="@+id/counter_rounds_list_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/counter_rounds_list_item"
+        app:layout_constraintTop_toTopOf="@+id/counter_rounds_list_item" />
+
+    <TextView
+        android:id="@+id/counter_timers_list_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="5dp"
+        android:text="@string/default_count_empty"
+        android:textColor="@color/textSecondary"
+        app:layout_constraintEnd_toStartOf="@+id/description1_timer_list_item"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/description1_timer_list_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:text="@string/description_1_list_item"
+        android:textColor="@color/textSecondary"
+        app:layout_constraintBottom_toBottomOf="@+id/counter_timers_list_item"
+        app:layout_constraintEnd_toStartOf="@+id/duration_list_item"
+        app:layout_constraintStart_toEndOf="@+id/counter_timers_list_item"
+        app:layout_constraintTop_toTopOf="@+id/counter_timers_list_item" />
+
+    <TextView
+        android:id="@+id/duration_list_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:text="@string/default_count_empty"
+        android:textColor="@color/textSecondary"
+        app:layout_constraintBottom_toBottomOf="@+id/description1_timer_list_item"
+        app:layout_constraintEnd_toStartOf="@+id/description2_timer_list_item"
+        app:layout_constraintStart_toEndOf="@+id/description1_timer_list_item"
+        app:layout_constraintTop_toTopOf="@+id/description1_timer_list_item" />
+
+    <TextView
+        android:id="@+id/description2_timer_list_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:text="@string/description_2_list_item"
+        android:textColor="@color/textSecondary"
+        app:layout_constraintBottom_toBottomOf="@+id/duration_list_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/duration_list_item"
+        app:layout_constraintTop_toTopOf="@+id/duration_list_item" />
+
+    <ImageButton
+        android:id="@+id/exapnad_button_list_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/cd_expandbutton_list_item"
+        android:background="@color/dark_bg_16"
+        android:tint="@color/icons"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description2_timer_list_item"
+        app:srcCompat="@android:drawable/arrow_up_float" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
